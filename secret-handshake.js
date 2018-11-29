@@ -20,11 +20,17 @@ function secretHandshake(number) {
   }
 
   if(binaryNumber % 10 == 1 && binaryNumber != 1) {
-    handshake.push(secrets[1]);
-    handshake.push(secrets[10]);
+    let stringNumber = binaryNumber.toString();
+    if(stringNumber.endsWith("11")) {
+      handshake.push(secrets[1]);
+      handshake.push(secrets[10]);
+    }
 
-    if(binaryNumber == 11111) {
+    if(stringNumber.endsWith("111")) {
       handshake.push(secrets[100]);
+    }
+
+    if(stringNumber.endsWith("1111")) {
       handshake.push(secrets[1000]);
     }
   }
