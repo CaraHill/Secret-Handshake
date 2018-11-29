@@ -13,10 +13,15 @@ function secretHandshake(number) {
   let binaryNumber = (+number).toString(2);
   let handshake = [];
 
-  for (let key in secrets) {
+  for(let key in secrets) {
     if(binaryNumber == key) {
       handshake.push(secrets[key]);
     }
+  }
+
+  if(binaryNumber % 10 == 1 && binaryNumber != 1) {
+    handshake.push(secrets[1]);
+    handshake.push(secrets[10]);
   }
 
   if(binaryNumber >= 10000) {
