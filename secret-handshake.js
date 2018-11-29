@@ -6,10 +6,11 @@ function secretHandshake(number) {
     1000: "jump"
   };
 
+  let binaryNumber = (+number).toString(2);
   let handshake = [];
 
   for (let key in secrets) {
-    if(number == key) {
+    if(binaryNumber == key) {
       handshake.push(secrets[key]);
     }
   }

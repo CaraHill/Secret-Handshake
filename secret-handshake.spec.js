@@ -5,11 +5,11 @@ describe('Secret Handshake', () => {
     expect(secretHandshake(1)).toEqual(['wink']);
   });
 
-  xtest('binary 10 (decimal 2) is a double blink', () => {
+  test('binary 10 (decimal 2) is a double blink', () => {
     expect(secretHandshake(2)).toEqual(['double blink']);
   });
 
-  xtest('binary 100 (decimal 4) is close your eyes', () => {
+  test('binary 100 (decimal 4) is close your eyes', () => {
     expect(secretHandshake(4)).toEqual(['close your eyes']);
   });
 
