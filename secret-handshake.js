@@ -1,4 +1,8 @@
 function secretHandshake(number) {
+  if(!Number.isInteger(number)) {
+    throw new Error("Handshake must be a number");
+  }
+
   const secrets = {
     1: "wink",
     10: "double blink",
@@ -13,6 +17,10 @@ function secretHandshake(number) {
     if(binaryNumber == key) {
       handshake.push(secrets[key]);
     }
+  }
+
+  if(binaryNumber >= 10000) {
+    handshake.reverse();
   }
 
   return handshake;

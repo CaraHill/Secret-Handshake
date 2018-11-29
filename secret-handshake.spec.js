@@ -13,11 +13,11 @@ describe('Secret Handshake', () => {
     expect(secretHandshake(4)).toEqual(['close your eyes']);
   });
 
-  xtest('binary 1000 (decimal 8) is jump', () => {
+  test('binary 1000 (decimal 8) is jump', () => {
     expect(secretHandshake(8)).toEqual(['jump']);
   });
 
-  xtest('binary 11 (decimal 3) is wink and double blink', () => {
+  test('binary 11 (decimal 3) is wink and double blink', () => {
     expect(secretHandshake(3)).toEqual(['wink', 'double blink']);
   });
 
@@ -29,7 +29,7 @@ describe('Secret Handshake', () => {
     expect(secretHandshake(31)).toEqual(['jump', 'close your eyes', 'double blink', 'wink']);
   });
 
-  xtest('text is an invalid secret handshake', () => {
+  test('text is an invalid secret handshake', () => {
     expect(() => secretHandshake('piggies'))
       .toThrow(new Error('Handshake must be a number'));
   });
