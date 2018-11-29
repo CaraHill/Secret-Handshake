@@ -22,6 +22,11 @@ function secretHandshake(number) {
   if(binaryNumber % 10 == 1 && binaryNumber != 1) {
     handshake.push(secrets[1]);
     handshake.push(secrets[10]);
+
+    if(binaryNumber == 11111) {
+      handshake.push(secrets[100]);
+      handshake.push(secrets[1000]);
+    }
   }
 
   if(binaryNumber >= 10000) {
